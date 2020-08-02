@@ -1,0 +1,36 @@
+<?php
+	session_start();
+	if($_SESSION['UserID'] == "")
+	{
+		echo "Please Login!";
+		exit();
+	}
+
+	if($_SESSION['Status'] != "USER")
+	{
+		echo "This page for User only!";
+		exit();
+	}	
+	
+	mysql_connect("localhost","root","12345678");
+	mysql_select_db("register");
+	$strSQL = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
+	$objQuery = mysql_query($strSQL);
+	$objResult = mysql_fetch_array($objQuery);
+?>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome Home</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="form">
+<p>Welcome <?php echo $_SESSION['Username']; ?>!</p>
+<p>This is secure area.</p>
+  <br>
+  <a href="edit_profile.php">Edit</a><br>
+  <br>
+  <a href="logout.php">Logout</a>
+</body>
+</html>

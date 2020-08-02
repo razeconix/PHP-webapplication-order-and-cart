@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>ThaiCreate.Com Tutorials</title>
+<link rel="stylesheet" href="css/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+<div class="form">
+<h1>Registration</h1>
+<form name="registration" action="save_register.php" method="post">
+<input name="txtUsername" type="text" id="txtUsername" placeholder="Username" size="20" required>
+<input type="email" name="email" placeholder="Email" required />
+<td><input name="txtPassword" type="password" id="txtPassword" placeholder="Password" required >
+<input type="submit" name="submit" value="Register" />
+</form>
+<br /><br />
+<a href="http://www.allphptricks.com/simple-user-registration-login-script-in-php-and-mysqli/">Tutorial Link</a> <br /><br />
+For More Web Development Tutorials Visit: <a href="http://www.allphptricks.com/">AllPHPTricks.com</a>
+</div>
+</body>
+</html>
